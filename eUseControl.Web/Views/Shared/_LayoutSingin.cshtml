@@ -1,0 +1,67 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>eUse System | @ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+
+    @Styles.Render("~/bundles/bootstrap/css")
+    @Styles.Render("~/bundles/animate.min/css")
+
+    @Styles.Render("~/bundles/aos/css")
+
+    @Styles.Render("~/bundles/bootstrap.min/css")
+
+    @Styles.Render("~/bundles/bootstrap-icons/css")
+    @Styles.Render("~/bundles/glightbox.min/css")
+    @Styles.Render("~/bundles/swiper-bundle.min/css")
+
+    @Styles.Render("~/bundles/style/css")
+
+
+
+
+
+
+    @if (IsSectionDefined("Styles"))
+    {@RenderSection("Styles", required: false)}
+
+</head>
+
+<body>
+
+
+
+    @Html.Partial("_TopBar")
+
+    @Html.Partial("_Header")
+
+
+
+
+    @RenderBody()
+
+    @Html.Partial("_Footer")
+
+
+
+    @Scripts.Render("~/bundles/aos/js")
+
+    @Scripts.Render("~/bundles/glightbox.min/js")
+    @Scripts.Render("~/bundles/isotope.pkgd.min/js")
+    @Scripts.Render("~/bundles/validate/js")
+    @Scripts.Render("~/bundles/swiper-bundle.min/js")
+
+    @Scripts.Render("~/bundles/main/js")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
